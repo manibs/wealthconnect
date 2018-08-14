@@ -1,0 +1,7 @@
+{
+  "name": "stockies",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
