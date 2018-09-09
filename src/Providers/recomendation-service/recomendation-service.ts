@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HTTP } from '@ionic-native/http';
+
 /*
   Generated class for the RecomendationServiceProvider provider.
 
@@ -11,7 +12,7 @@ import { HTTP } from '@ionic-native/http';
 export class RecomendationServiceProvider {
 
   public Recomendations: any;
-
+  public baseUrl = 'https://gentle-plains-98312.herokuapp.com/api/';
   constructor(public http: HTTP) {
     console.log('Hello RecomendationServiceProvider Provider');
   }
@@ -31,7 +32,7 @@ export class RecomendationServiceProvider {
       // We're using Angular HTTP provider to request the data,
       // then on the response, it'll map the JSON data to a parsed JS object.
       // Next, we process the data and resolve the promise with the new data.
-      this.http.get('assets/recomendation.json', {}, {})
+      this.http.get(this.baseUrl+'Recommendations', {}, {})
         .then(data => {
           this.Recomendations = data.data.json();
           return this.Recomendations;
@@ -39,4 +40,22 @@ export class RecomendationServiceProvider {
     });
   }
 
+ /**
+   * SaveRecomendations
+   */
+  public SaveRecomendation(recomendation) {
+    
+    // don't have the data yet
+    return new Promise(resolve => {
+      // We're using Angular HTTP provider to request the data,
+      // then on the response, it'll map the JSON data to a parsed JS object.
+      // Next, we process the data and resolve the promise with the new data.
+      this.http.post(this.baseUrl+'Recommendations', recomendation, {})
+        .then(data => {
+          return true;
+        },error=>{
+          return false;
+        });
+    });
+  }
 }

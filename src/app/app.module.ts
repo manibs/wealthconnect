@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -15,7 +17,7 @@ import { AdminPage } from '../pages/admin/admin';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import {Push} from '@ionic-native/push';
-import { RecomendationServiceProvider } from '../providers/recomendation-service/recomendation-service';
+import { RecomendationServiceProvider } from '../Providers/recomendation-service/recomendation-service';
 import { NotificationServiceProvider } from '../providers/notification-service/notification-service';
 
 
@@ -50,6 +52,8 @@ import { NotificationServiceProvider } from '../providers/notification-service/n
     SplashScreen,
     Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HTTP,
+    HttpClient,
     RecomendationServiceProvider,
     NotificationServiceProvider
   ]

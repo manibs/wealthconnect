@@ -19,4 +19,14 @@
       Commodity calls
     </button>
    </ion-list>
+
+   <ion-list>
+    <ion-item *ngFor="let recomendation of recomendations">
+      <h2>{{recomendation.Stock}} </h2>
+      <p>CMP : {{recomendation.CMP}}</p>
+      <p>Target : {{recomendation.target}}</p>
+      <p>Stop : {{recomendation.stopploss}}</p>
+      <p>Recomended Date : {{recomendation.RecomendedOn}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
