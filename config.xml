@@ -87,7 +87,7 @@
         <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
         <variable name="FCM_VERSION" value="11.6.2" />
     </plugin>
+    <plugin name="cordova-plugin-advanced-http" spec="^1.11.1" />
     <engine name="android" spec="^7.1.0" />
     <engine name="browser" spec="5.0.4" />
-    <plugin name="cordova-plugin-advanced-http" spec="^1.11.1" />
 </widget>
