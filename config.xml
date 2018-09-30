@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.explorem.stockies" version="0.0.10" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.explorem.stockies" version="0.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Stockies</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>The app for recomendations</description>
+    <author email="manibhushan.sharma@gmail.com" href="http://manibhushansharma.blogspot.com">Gemini Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
