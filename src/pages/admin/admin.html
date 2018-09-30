@@ -7,12 +7,26 @@
 </ion-header>
 
 <ion-content padding>
+    <form (ngSubmit)="SaveNotification()">
 
-    <ion-label color="primary">Message title</ion-label>
-    <ion-input placeholder="Enter message title"></ion-input>
+        <ion-label color="primary">Script</ion-label>
+        <ion-input placeholder="Enter Script" type="text" [(ngModel)]="recomendation.Stock" name="Stock"></ion-input>
 
-    <ion-label color="primary">Description</ion-label>
-    <ion-textarea placeholder="Enter a description"></ion-textarea>
+        <ion-label color="primary">CMP</ion-label>
+        <ion-input placeholder="Enter CMP" type="number" [(ngModel)]="recomendation.CMP" name="CMP"></ion-input>
 
-    <button ion-button>submit</button>
+        <ion-label color="primary">Target</ion-label>
+        <ion-input placeholder="Enter target" type="number" [(ngModel)]="recomendation.target" name="target"></ion-input>
+
+        <ion-label color="primary">Stop loss</ion-label>
+        <ion-input placeholder="Enter stop loss" type="number" [(ngModel)]="recomendation.stopploss" name="stopploss"></ion-input>
+
+        <ion-label color="primary">RecomendedOn</ion-label>
+        <ion-input placeholder="Enter RecomendedOn dd/mm/yyyy" type="text" [(ngModel)]="recomendation.RecomendedOn" name="RecomendedOn"></ion-input>
+
+        <ion-label color="primary">CallType</ion-label>
+        <ion-input placeholder="Enter CallType" type="text" [(ngModel)]="recomendation.CallType" name="CallType"></ion-input>
+
+        <button ion-button type="submit" block>submit</button>
+    </form>
 </ion-content>

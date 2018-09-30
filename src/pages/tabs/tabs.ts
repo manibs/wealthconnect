@@ -17,7 +17,7 @@ export class TabsPage {
   // tab3Root = ContactPage;
   tab2Root = notificationPage;
   tab3Root=AdminPage;
-  tab4Root = ChatPage;
+  tab4Root = ContactPage;
 
   constructor() {
 

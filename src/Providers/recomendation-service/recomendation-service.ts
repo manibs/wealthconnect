@@ -47,10 +47,10 @@ export class RecomendationServiceProvider {
 
   public GetRecomendations() {
     //return this.Recomendations; 
-    // if (this.Recomendations) {
-    //   // already loaded data
-    //   return Promise.resolve(this.Recomendations);
-    // }
+    if (this.Recomendations) {
+      // already loaded data
+      return Promise.resolve(this.Recomendations);
+    }
 
     // don't have the data yet
       return new Promise(resolve => {
@@ -61,12 +61,9 @@ export class RecomendationServiceProvider {
       this.http.get(this.baseUrl+'Recommendations', {}, {})
         .then(data => {
           this.Recomendations = data.data;
-          //console.log(this.Recomendations);
           return this.Recomendations;
         });
      });
-
-   
   }
 
  /**
@@ -81,10 +78,11 @@ export class RecomendationServiceProvider {
       // Next, we process the data and resolve the promise with the new data.
       this.http.post(this.baseUrl+'Recommendations', recomendation, {})
         .then(data => {
-          return true;
-        },error=>{
-          return false;
-        });
+          resolve(data);
+        })
+         .catch(error => {
+                    console.log(error);          
+  });
     });
   }
 }
