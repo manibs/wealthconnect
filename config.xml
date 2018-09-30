@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.explorem.stockies" version="0.0.11" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Stockies</name>
-    <description>The app for recomendations</description>
+<widget id="com.explorem.stockies" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Wealth connect</name>
+    <description>The app for stock calls</description>
     <author email="manibhushan.sharma@gmail.com" href="http://manibhushansharma.blogspot.com">Gemini Team</author>
     <content src="index.html" />
     <access origin="*" />
